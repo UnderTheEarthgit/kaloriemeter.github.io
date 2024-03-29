@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+body {
+  background-color: #ffffff; /*f5f5f7*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.navbar {
+  list-style-type: none;
+  height: 2.8125rem;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background-color: #f5f5f7;
+  z-index: 100;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  justify-content: flex-start;
+}
+
+.search-bar {
+  margin-left: 5px;
+  margin-top: 12px;
+  border: transparent;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+
+.navbar.scrolled .search-bar {
+  transform: translateX(-15%);
+}
+.search-bar.shown {
+  opacity: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  height: 2.8125rem;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background-color: #f5f5f7;
+  z-index: 100;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+nav li {
+  position: relative;
+  margin: 0 1px;
+  margin-right: 10;
+  display: inline;
+}
+
+.a1 {
+  margin-top: 5px;
+  margin-left: 2px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 0.5em;
+  border-radius: 2px;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  border: 1.5px solid #020202;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  background-color: #f5f5f7;
+  border: 1px solid black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  width: 100vw;
+  margin-top: 8px;
+}
+
+.dropdown-column {
+  float: left;
+  margin-right: 30px;
+}
+
+nav li:hover .dropdown {
+  display: block;
+}
+.dropdown h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9px;
+  margin-left: 470px;
+  margin-right: 400px;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000;
+  text-decoration: none;
+  border: transparent;
+}
+
+.logo a:hover {
+  border: transparent;
+}
+
+.about-us {
+  position: relative;
+  right: -45px;
+  transition: all 0.3s ease;
+  transform: translateX(0);
+}
+.navbar.scrolled .about-us {
+  transform: translateX(-40%);
+}
+
+.signin .a1 {
+  position: relative;
+  right: -55px;
+  transition: all 0.3s ease;
+  transform: translateX(0);
+}
+.navbar.scrolled .signin .a1 {
+  transform: translateX(-50%);
+}
+
+.shopping-bag {
+  position: relative;
+  right: -35px;
+  border: transparent;
+  transition: all 0.3s ease;
+  transform: translate(0, -25%);
+}
+.navbar.scrolled .shopping-bag {
+  transform: translate(-60%, -25%);
+}
+.shopping-bag .a1 {
+  border: transparent;
+}
+.shopping-bag .a1:hover {
+  border: transparent;
+}
+
+/* SEARCH BAR STARTS HERE */
+.containerS {
+  background-color: #f5f5f7;
+  box-sizing: border-box;
+}
+
+.inputBox_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f7;
+  border: 1px solid black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  overflow: hidden;
+  margin-top: 45.1px;
+}
+
+.search_icon {
+  height: 18px;
+  padding: 0 10px;
+  fill: #000000;
+  cursor: pointer;
+}
+
+.inputBox {
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  border: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.inputBox::placeholder {
+  color: #000000;
+  opacity: 0.7;
+}
+
+/* *new arrivals section */
+
+.new_arrivals {
+  width: 100%;
+  margin: 100px 0 0 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.new_arrivals_img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ! hover effect style (ONLY use when gap is fixed)*/
+.hover-image {
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  display: none;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-image: url("pics/cucumber.jpg"); Replace with the path of the hover image */
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  cursor: pointer;
+}
+
+.image-wrapper:hover::before {
+  opacity: 1;
+}
+
+.new_arrivals p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* *FOOTER STARTS HERE */
+footer {
+  background-color: #adacac;
+  border: 1px solid black;
+  padding: 30px 0;
+  margin-top: 1000px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex-basis: 25%;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul li a {
+  color: #777;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+}
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon {
+  border-radius: 50%;
+  border: 1px solid #000000;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  border-color: #ff00d9;
+  box-shadow: 0 0 5px 2px #6a00ff;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #000000;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 58px;
+  box-shadow: 0 8px 8px -4px rgb(10, 11, 13);
+}
+
+.banner-img img {
+  width: 100%;
+  display: block;
+}
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 640px) {
+  .slider_wrapper .slide {
+    padding: 0 4rem;
+  }
+}
+
+/* *see more buttom styles */
+.see-more-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  bottom: 250px;
+  left: 13px;
+}
+.see-more-btn {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #000000;
+}
+
+.see-more-btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #000000;
+}
+
+.see-more-btn:active {
+  transform: scale(0.9);
+}
+
+.see-more-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.big-img {
+  position: relative;
+  bottom: 500px;
+  left: 100px;
+}
+
+.big-img img {
+  width: 750px;
+  height: 950px;
+}
+.big-img p {
+  text-align: left;
+  margin-left: 270px;
+}
+
+.small-img {
+  position: relative;
+  left: 1000px;
+  bottom: 1540px;
+}
+
+.small-img img {
+  width: 400px;
+  height: 450px;
+}
+
+.small-img p {
+  text-align: left;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  cursor: pointer;
+  padding: 10px 10px;
+}

@@ -187,6 +187,18 @@ div.gallery {
       width: 100%;
     }
   }
+
+@media only screen and (max-width: 400px) {
+
+    .responsive {
+      
+    }
+
+    .vid {
+
+      margin-top: 2100px;
+    }
+  }
   
   .clearfix:after {
     content: "";
